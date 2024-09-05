@@ -1,0 +1,294 @@
+:root {
+    --header-color: #000;
+    --highlight-color: #ffbb00;
+    --para-color: rgb(0, 0, 0);
+    --text-white: #fff;
+    --bg-color: #1c1c1c;
+    --bg-color-section: #e0e0e0;
+    --section-color: #ffffff;
+    --accent-color: #a4d630;
+    --button-bg-color: #1c1c1c;
+    --button-hover-color: #333;
+    --banner-color: #078b18;
+    --accent-inputfield: #176123;
+}
+
+.hideme {
+    display: none;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--header-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.alignmetext {
+    text-align: start;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.navbutton {
+    color: var(--text-white); /* White text color */
+    text-decoration: none;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbutton:hover {
+    background-color: var(--accent-color); /* Highlight color on hover */
+}
+
+.navbar {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: var(--bg-color);
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 24px;
+    padding: 5px 20px;
+}
+
+.navbar a:hover {
+    color: var(--header-color);
+    border-radius: 20px;
+    background-color: var(--accent-color);
+    transition: background-color 0.3s ease;
+}
+
+.banner {
+    background-color: var(--banner-color); /* Use the accent color */
+    color: var(--text-white); /* White text */
+    text-align: center; /* Center the text */
+    padding: 20px; /* Add some padding for spacing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.banner h1 {
+    margin: 0 0 10px 0; /* Remove default margin and add some spacing */
+    font-size: 36px; /* Larger font for the heading */
+}
+
+.banner p {
+    margin: 0; /* Remove default margin */
+    font-size: 18px; /* Medium font size for the paragraph */
+}
+
+.owner-section {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--section-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.owner-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.owner-section h3 {
+    color: var(--header-color);
+    margin-bottom: 10px;
+}
+
+.owner-section p {
+    line-height: 1.6;
+    color: var(--para-color);
+}
+
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    flex: 1;
+    padding: 0;
+}
+
+.left-side, .right-side {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-side {
+    background-image: url('https://www.locate2u.com/wp-content/uploads/2023/09/fresh-delivery.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    color: #fff;
+}
+
+.right-side {
+    padding: 40px;
+    background-color: var(--bg-color-section);
+}
+
+.email-form select {
+    padding: 10px;
+    border: 1px solid #000000; /* Black border */
+    border-radius: 6px; /* Rounded corners */
+    margin-bottom: 10px; /* Space between dropdown and button */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+}
+
+.email-signup {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #fff;
+}
+
+.email-text h2 {
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+.email-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.email-form input, .email-form button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 92%;
+}
+
+.email-form input[type="text"], .email-form input[type="email"] {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+}
+
+.email-form button {
+    background-color: var(--accent-color);
+    color: #000;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.email-form button:hover {
+    background-color: var(--button-bg-color);
+    color: #fff;
+}
+
+.about-us h2 {
+    margin-bottom: 20px;
+    color: var(--header-color);
+}
+
+.about-us p {
+    line-height: 1.6;
+    color: var(--para-color);
+}
+
+footer {
+    background-color: var(--bg-color);
+    padding: 20px;
+    text-align: center;
+    color: var(--text-white);
+}
+
+footer a {
+    color: var(--text-white);
+}
+
+footer a:hover {
+    color: var(--accent-color);
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .left-side {
+        padding: 20px;
+        background-size: cover;
+    }
+
+    .right-side {
+        padding: 20px;
+    }
+
+    .email-signup {
+        padding: 15px;
+    }
+
+    .email-form input, .email-form button {
+        max-width: 100%;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+    }
+
+    .banner h1 {
+        font-size: 22px;
+    }
+
+    .banner p {
+        font-size: 14px;
+    }
+
+    .banner {
+        display: block;
+        background-color: #3c8500;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .navbar a {
+        font-size: 13px;
+    }
+}
