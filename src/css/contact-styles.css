@@ -1,0 +1,205 @@
+/* Root CSS Variables */
+:root {
+    --primary-color: #f0f8ff; /* Alice Blue background */
+    --secondary-color: #1c3d5a; /* Dark blue for text and accents */
+    --accent-color: #00aaff; /* A bright cyan blue for interactive elements */
+    --text-color: #1f2933; /* Darker grayish-blue for text */
+    --background-color: #e6f2ff; /* Light sky blue for section backgrounds */
+    --button-hover-color: #0077cc; /* Darker blue for button hover */
+    --border-color: #b0c4de; /* Light steel blue for input borders */
+    --input-bg-color: #ffffff; /* White background for input fields */
+    --input-focus-border-color: #00aaff; /* Bright blue border on input focus */
+    --brand-logo-size: 150px; /* Logo size in the brands section */
+}
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+header {
+    background-color: var(--secondary-color);
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center;
+    max-width: 1200px; /* Centered width constraint for navbar */
+    margin: 0 auto; /* Center the entire navbar */
+    padding: 0 40px; /* Control how far content is from edges */
+}
+
+.logo-color {
+    color: var(--primary-color);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 70px;
+    margin-right: 10px;
+    border-radius: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 20px;
+    background-color: var(--background-color);
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-section h2 {
+    font-size: 28px;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+.contact-section p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: var(--text-color);
+}
+
+/* Contact Form */
+.contact-form {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: start;
+}
+
+/* Form Group */
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: var(--secondary-color);
+    font-weight: 600;
+    width: 100%;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: var(--text-color);
+    outline: none;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--secondary-color);
+}
+
+/* Textarea specific styles */
+textarea {
+    resize: none;
+    min-height: 100px;
+}
+
+/* Select (dropdown) */
+select {
+    height: 44px;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    grid-column: span 2; /* Make the button span both columns */
+    box-sizing: border-box;
+}
+
+button[type="submit"]:hover {
+    background-color: #1a0c19; /* Darker secondary color */
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .contact-form {
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    }
+
+    button[type="submit"] {
+        width: auto;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}

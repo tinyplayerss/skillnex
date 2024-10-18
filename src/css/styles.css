@@ -1,0 +1,321 @@
+/* Root CSS Variables */
+:root {
+    --primary-color: #f0f8ff; /* Alice Blue background */
+    --secondary-color: #1c3d5a; /* Dark blue for text and accents */
+    --accent-color: #00aaff; /* A bright cyan blue for interactive elements */
+    --text-color: #1f2933; /* Darker grayish-blue for text */
+    --background-color: #e6f2ff; /* Light sky blue for section backgrounds */
+    --button-hover-color: #0077cc; /* Darker blue for button hover */
+    --border-color: #b0c4de; /* Light steel blue for input borders */
+    --input-bg-color: #ffffff; /* White background for input fields */
+    --input-focus-border-color: #00aaff; /* Bright blue border on input focus */
+    --brand-logo-size: 150px; /* Logo size in the brands section */
+}
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+header {
+    background-color: var(--secondary-color);
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center;
+    max-width: 1200px; /* Centered width constraint for navbar */
+    margin: 0 auto; /* Center the entire navbar */
+    padding: 0 40px; /* Control how far content is from edges */
+}
+
+.logo-color {
+    color: var(--primary-color);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 70px;
+    margin-right: 10px;
+    border-radius: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Hero Section (About) */
+.hero-section {
+    padding: 60px 20px;
+    background-color: var(--primary-color);
+    text-align: center;
+}
+
+.hero-section h2 {
+    font-size: 36px;
+    color: var(--secondary-color);
+}
+
+.hero-section p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: var(--text-color);
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    background-color: var(--accent-color);
+}
+
+/* Services Section */
+.services-section {
+    padding: 60px 20px;
+    background-color: var(--background-color);
+    text-align: center;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.services-section h2 {
+    font-size: 32px;
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 40px;
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Cloud-like service item */
+.service-item {
+    background: linear-gradient(
+        145deg,
+        var(--primary-color),
+        var(--background-color)
+    );
+    box-shadow:
+        0px 10px 15px rgba(0, 0, 0, 0.1),
+        0px 20px 25px rgba(0, 0, 0, 0.05); /* Subtle shadow for a floating effect */
+    border-radius: 20px; /* Rounded borders for a cloud-like shape */
+    padding: 30px 20px;
+    width: calc(33% - 20px); /* Adjust width with gap */
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-item:hover {
+    transform: translateY(
+        -10px
+    ); /* Slight upward movement on hover for a floating effect */
+}
+
+.service-item h3 {
+    font-size: 22px;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+/* Responsive grid */
+@media screen and (max-width: 1024px) {
+    .service-item {
+        width: calc(50% - 20px); /* Adjust width for tablets */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .service-item {
+        width: 100%; /* Full width for mobile devices */
+    }
+}
+
+/* Brands Section */
+.brands-section {
+    padding: 60px 20px;
+    background-color: var(--primary-color);
+}
+
+.brands-section h2 {
+    font-size: 32px;
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(var(--brand-logo-size), 1fr)
+    );
+    gap: 20px;
+    justify-items: center;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.brands-grid img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* Lecture Section */
+.lecture-section {
+    padding: 80px 20px;
+    background-color: var(--background-color); /* Light sky blue background */
+    text-align: center;
+}
+
+.lecture-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: var(--primary-color); /* Clean white background */
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.lecture-section h2 {
+    font-size: 32px;
+    color: var(--secondary-color); /* Dark blue for header */
+    margin-bottom: 20px;
+}
+
+.lecture-section p {
+    font-size: 18px;
+    color: var(--text-color); /* Dark grayish-blue for text */
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.lecture-section .btn {
+    padding: 15px 30px;
+    background-color: var(--accent-color); /* Bright cyan blue for button */
+    color: var(--primary-color); /* White text */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.lecture-section .btn:hover {
+    background-color: var(--button-hover-color); /* Darker blue on hover */
+}
+
+/* Category Section */
+.category-section {
+    padding: 60px 20px;
+    background-color: var(--background-color); /* Light sky blue background */
+}
+
+.categories-container {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(300px, 1fr)
+    ); /* Responsive grid */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-card {
+    background-color: var(--primary-color); /* White background */
+    border: 1px solid var(--border-color); /* Light border for card */
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.category-card h3 {
+    font-size: 24px;
+    color: var(--secondary-color); /* Dark blue heading */
+    margin-bottom: 15px;
+}
+
+.category-card p {
+    font-size: 16px;
+    color: var(--text-color); /* Dark grayish-blue text */
+    margin-bottom: 20px;
+}
+
+.category-card .btn {
+    padding: 12px 25px;
+    background-color: var(--secondary-color); /* Bright cyan blue */
+    color: var(--primary-color); /* White text */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.category-card .btn:hover {
+    background-color: var(--button-hover-color); /* Darker blue on hover */
+}
+
+.category-card:hover {
+    transform: translateY(-5px); /* Slight hover lift effect */
+}

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact Us | Skillnex</title>
+        <link rel="stylesheet" href="src/css/contact-styles.css" />
+    </head>
+    <body>
+        <!-- Navbar -->
+        <header>
+            <nav>
+                <div class="logo-container">
+                    <img
+                        class="logo"
+                        src="assets/Skillnex-logo.jpeg"
+                        alt="Logo"
+                    />
+                    <h1 class="logo-color">Skillnex</h1>
+                </div>
+                <ul>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#brands">Brands</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.html#lectures">Lectures</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <h2>Contact Us</h2>
+            <p>
+                If you're looking to collaborate with Skillnex or have any
+                inquiries, fill out the form below, and we will get in touch
+                with you soon.
+            </p>
+
+            <!-- Contact Form -->
+            <!-- Contact Form using Formspree -->
+            <form
+                action="https://formspree.io/f/manyyzvp"
+                method="POST"
+                class="contact-form"
+            >
+                <!-- Name Field -->
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required />
+
+                <!-- Last Name Field -->
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" name="lastname" required />
+
+                <!-- Email Field -->
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+
+                <!-- Phone Field -->
+                <label for="phone">Phone</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    placeholder="123-456-7890"
+                />
+
+                <!-- Submit Button -->
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Skillnex. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
